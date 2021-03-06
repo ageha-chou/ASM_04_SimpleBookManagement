@@ -63,11 +63,12 @@ namespace ASM_04 {
             this.btnNew = new System.Windows.Forms.Button();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSave = new System.Windows.Forms.Button();
-            this.bsBook = new System.Windows.Forms.BindingSource(this.components);
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblEmp = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.bsBook = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnBook)).BeginInit();
             this.bnBook.SuspendLayout();
@@ -84,13 +85,14 @@ namespace ASM_04 {
             this.flowLayoutPanel8.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.flowLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsBook)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.bnBook, 0, 0);
@@ -109,6 +111,7 @@ namespace ASM_04 {
             // bnBook
             // 
             this.bnBook.AddNewItem = null;
+            this.bnBook.BackColor = System.Drawing.Color.AntiqueWhite;
             this.bnBook.CountItem = this.bindingNavigatorCountItem;
             this.bnBook.DeleteItem = null;
             this.bnBook.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -129,14 +132,14 @@ namespace ASM_04 {
             this.bnBook.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bnBook.Name = "bnBook";
             this.bnBook.PositionItem = this.bindingNavigatorPositionItem;
-            this.bnBook.Size = new System.Drawing.Size(450, 27);
+            this.bnBook.Size = new System.Drawing.Size(450, 31);
             this.bnBook.TabIndex = 0;
             this.bnBook.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -146,7 +149,7 @@ namespace ASM_04 {
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -155,13 +158,13 @@ namespace ASM_04 {
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -175,7 +178,7 @@ namespace ASM_04 {
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -183,7 +186,7 @@ namespace ASM_04 {
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -192,13 +195,13 @@ namespace ASM_04 {
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // dgvBooks
             // 
@@ -220,12 +223,13 @@ namespace ASM_04 {
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel5);
             this.flowLayoutPanel1.Controls.Add(this.btnGetAll);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 452);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 452);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(425, 50);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(444, 50);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // flowLayoutPanel5
@@ -248,22 +252,25 @@ namespace ASM_04 {
             // 
             // btnGetAll
             // 
+            this.btnGetAll.BackColor = System.Drawing.Color.Orange;
             this.btnGetAll.Location = new System.Drawing.Point(171, 5);
             this.btnGetAll.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.btnGetAll.Name = "btnGetAll";
             this.btnGetAll.Size = new System.Drawing.Size(93, 37);
             this.btnGetAll.TabIndex = 0;
             this.btnGetAll.Text = "Get All";
-            this.btnGetAll.UseVisualStyleBackColor = true;
+            this.btnGetAll.UseVisualStyleBackColor = false;
             this.btnGetAll.Click += new System.EventHandler(this.btnGetAll_Click);
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.34742F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.65258F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblEmp, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -280,13 +287,14 @@ namespace ASM_04 {
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel9, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(459, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.221312F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.0082F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.56557F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(400, 488);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(410, 505);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -297,23 +305,24 @@ namespace ASM_04 {
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel3, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel2, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 48);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 49);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(394, 199);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(404, 206);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // flowLayoutPanel4
             // 
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.AntiqueWhite;
             this.flowLayoutPanel4.Controls.Add(this.label3);
             this.flowLayoutPanel4.Controls.Add(this.txtBookPrice);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 135);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 139);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(388, 61);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(398, 64);
             this.flowLayoutPanel4.TabIndex = 2;
             // 
             // label3
@@ -336,12 +345,13 @@ namespace ASM_04 {
             // 
             // flowLayoutPanel3
             // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.AntiqueWhite;
             this.flowLayoutPanel3.Controls.Add(this.label2);
             this.flowLayoutPanel3.Controls.Add(this.txtBookName);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 69);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 71);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(388, 60);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(398, 62);
             this.flowLayoutPanel3.TabIndex = 1;
             // 
             // label2
@@ -364,12 +374,13 @@ namespace ASM_04 {
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.flowLayoutPanel2.Controls.Add(this.label1);
             this.flowLayoutPanel2.Controls.Add(this.txtBookID);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(388, 60);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(398, 62);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // label1
@@ -391,39 +402,41 @@ namespace ASM_04 {
             // 
             // tableLayoutPanel5
             // 
+            this.tableLayoutPanel5.BackColor = System.Drawing.Color.AntiqueWhite;
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel8, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel6, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel7, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 253);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 261);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 4;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.88623F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.11377F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(394, 232);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(404, 241);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // flowLayoutPanel8
             // 
             this.flowLayoutPanel8.Controls.Add(this.btnReport);
             this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(3, 149);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(3, 158);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             this.flowLayoutPanel8.Size = new System.Drawing.Size(353, 46);
             this.flowLayoutPanel8.TabIndex = 4;
             // 
             // btnReport
             // 
+            this.btnReport.BackColor = System.Drawing.Color.Orchid;
             this.btnReport.Location = new System.Drawing.Point(54, 3);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(296, 41);
             this.btnReport.TabIndex = 0;
             this.btnReport.Text = "Book Report";
-            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanel6
             // 
@@ -438,94 +451,114 @@ namespace ASM_04 {
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(260, 3);
+            this.btnDelete.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.Location = new System.Drawing.Point(263, 3);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(93, 52);
+            this.btnDelete.Size = new System.Drawing.Size(90, 52);
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(157, 3);
+            this.btnUpdate.BackColor = System.Drawing.Color.Plum;
+            this.btnUpdate.Location = new System.Drawing.Point(160, 3);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(90, 52);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(54, 3);
+            this.btnNew.BackColor = System.Drawing.Color.LightSalmon;
+            this.btnNew.Location = new System.Drawing.Point(57, 3);
             this.btnNew.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(90, 52);
             this.btnNew.TabIndex = 2;
             this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // flowLayoutPanel7
             // 
             this.flowLayoutPanel7.Controls.Add(this.btnSave);
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 86);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 91);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             this.flowLayoutPanel7.Size = new System.Drawing.Size(353, 55);
             this.flowLayoutPanel7.TabIndex = 3;
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.Thistle;
             this.btnSave.Location = new System.Drawing.Point(54, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(296, 41);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
             // 
             // flowLayoutPanel9
             // 
+            this.flowLayoutPanel9.BackColor = System.Drawing.Color.AntiqueWhite;
             this.flowLayoutPanel9.Controls.Add(this.label4);
             this.flowLayoutPanel9.Controls.Add(this.txtSearch);
+            this.flowLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel9.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(373, 39);
+            this.flowLayoutPanel9.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(404, 40);
             this.flowLayoutPanel9.TabIndex = 2;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(128, 3);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(200, 27);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Location = new System.Drawing.Point(3, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 30);
             this.label4.TabIndex = 1;
             this.label4.Text = "Search By Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(128, 8);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(245, 27);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // lblEmp
+            // 
+            this.lblEmp.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.lblEmp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEmp.Location = new System.Drawing.Point(459, 511);
+            this.lblEmp.Name = "lblEmp";
+            this.lblEmp.Size = new System.Drawing.Size(410, 28);
+            this.lblEmp.TabIndex = 2;
+            this.lblEmp.Text = "EmpID:";
+            this.lblEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmMaintainBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(872, 539);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frmMaintainBook";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -553,10 +586,10 @@ namespace ASM_04 {
             this.flowLayoutPanel8.ResumeLayout(false);
             this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bsBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.flowLayoutPanel9.ResumeLayout(false);
             this.flowLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsBook)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -605,6 +638,7 @@ namespace ASM_04 {
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label lblEmp;
     }
 }
 

@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmChangeAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeAccount.Designer.cs">
+      <DependentUpon>frmChangeAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMaintainBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,9 +65,18 @@
       <DependentUpon>frmMaintainBook.cs</DependentUpon>
     </Compile>
     <Compile Include="Presenters\BookPresenter.cs" />
+    <Compile Include="Presenters\EmpPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\IChangeAccountFrame.cs" />
+    <Compile Include="Views\ILoginFrame.cs" />
     <Compile Include="Views\IMainFrame.cs" />
+    <EmbeddedResource Include="frmChangeAccount.resx">
+      <DependentUpon>frmChangeAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMaintainBook.resx">
       <DependentUpon>frmMaintainBook.cs</DependentUpon>
     </EmbeddedResource>

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BookBLL.cs" />
+    <Compile Include="BLL\EmployeeBLL.cs" />
     <Compile Include="DTO\Book.cs" />
     <Compile Include="DTO\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

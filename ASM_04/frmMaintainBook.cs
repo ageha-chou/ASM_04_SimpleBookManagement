@@ -6,11 +6,16 @@ using System.Linq;
 using System.Windows.Forms;
 using System.ComponentModel;
 using System.Drawing;
+using AppLib;
 
 namespace ASM_04 {
     public partial class frmMaintainBook : Form, IMainFrame {
         public frmMaintainBook() {
             InitializeComponent();
+        }
+
+        public frmMaintainBook(Employee e) : this() {
+            lblEmp.Text = $"EmpID: {e.EmpID}";
         }
 
         private DataTable dtBook;

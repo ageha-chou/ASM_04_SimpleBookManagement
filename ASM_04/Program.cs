@@ -13,7 +13,7 @@ namespace ASM_04 {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMaintainBook());
+            Application.Run(new frmLogin());
         }
     }
 }

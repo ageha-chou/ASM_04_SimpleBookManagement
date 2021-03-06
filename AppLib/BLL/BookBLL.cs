@@ -24,7 +24,9 @@ namespace AppLib.BLL {
                 throw;
             }
             finally{
-                con.Close();
+                if (con.State != ConnectionState.Closed) {
+                    con.Close();
+                }
             }
             return dt;
         }
