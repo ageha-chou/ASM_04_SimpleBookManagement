@@ -1,6 +1,7 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
 using System;
+using System.Collections.Generic;
 
 namespace AppLib.BLL {
     public class BookBLL {

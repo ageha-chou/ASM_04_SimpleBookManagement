@@ -164,5 +164,12 @@ namespace ASM_04 {
             presenter = new BookPresenter(this);
             presenter.FilterByBookName();
         }
+
+        private void btnReport_Click(object sender, EventArgs e) {
+            this.Hide();
+            frmBookReport frm = new frmBookReport(dtBook);
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBookReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookReport.Designer.cs">
+      <DependentUpon>frmBookReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChangeAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="Views\IChangeAccountFrame.cs" />
     <Compile Include="Views\ILoginFrame.cs" />
     <Compile Include="Views\IMainFrame.cs" />
+    <EmbeddedResource Include="frmBookReport.resx">
+      <DependentUpon>frmBookReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangeAccount.resx">
       <DependentUpon>frmChangeAccount.cs</DependentUpon>
     </EmbeddedResource>
