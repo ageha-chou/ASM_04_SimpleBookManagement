@@ -1,9 +1,7 @@
 ﻿using AppLib;
 using AppLib.BLL;
 using ASM_04.Views;
-using System;
 using System.Data;
-using System.Linq;
 
 namespace ASM_04.Presenters {
     class BookPresenter {
@@ -15,7 +13,7 @@ namespace ASM_04.Presenters {
         }
 
         public void GetAllBooks() {
-            _bookModel = new BookBLL();
+            _bookModel = BookBLL.Instance;
             DataTable dtBook = _bookModel.GetBooks();
             dtBook.PrimaryKey = new DataColumn[] { dtBook.Columns["BookID"] };
             _view.BookDataTable = dtBook;
@@ -44,7 +42,7 @@ namespace ASM_04.Presenters {
                 BookName = _view.BookName,
                 BookPrice = float.Parse(_view.BookPrice)
             };
-            _bookModel = new BookBLL();
+            _bookModel = BookBLL.Instance;
             int id = _bookModel.AddBook(b);
             if (id > 0) {
                 _view.ProcessMessage = "Added successfully";
@@ -62,7 +60,7 @@ namespace ASM_04.Presenters {
                 BookName = _view.BookName,
                 BookPrice = float.Parse(_view.BookPrice)
             };
-            _bookModel = new BookBLL();
+            _bookModel = BookBLL.Instance;
             bool result = _bookModel.UpdateBook(b);
             if (result) {
                 _view.ProcessMessage = "Updated successfully";
@@ -76,7 +74,7 @@ namespace ASM_04.Presenters {
 
         public void DeleteBook() {
             int bookID = int.Parse(_view.BookID);
-            _bookModel = new BookBLL();
+            _bookModel = BookBLL.Instance;
             bool result = _bookModel.DeleteBook(bookID);
             if (result) {
                 _view.ProcessMessage = "Deleted successfully";

@@ -1,11 +1,6 @@
 ﻿using AppLib;
 using AppLib.BLL;
 using ASM_04.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ASM_04.Presenters {
     class EmpPresenter {
@@ -24,7 +19,7 @@ namespace ASM_04.Presenters {
             if(string.IsNullOrWhiteSpace(_loginView.EmpID) || string.IsNullOrWhiteSpace(_loginView.EmpID)) {
                 return;
             }
-            _empModel = new EmployeeBLL();
+            _empModel = EmployeeBLL.Instance;
             bool result = _empModel.CheckLogin(_loginView.EmpID, _loginView.EmpPwd);
             if (result) {
                 _loginView.Emp = _empModel.Emp;
@@ -36,7 +31,7 @@ namespace ASM_04.Presenters {
 
         public void ChangePwd() {
             if (_changeAccountView.NewPwd.Equals(_changeAccountView.ConfirmPwd)) {
-                _empModel = new EmployeeBLL();
+                _empModel = EmployeeBLL.Instance;
                 Employee emp = (Employee)_changeAccountView.Emp;
                 bool result = _empModel.ChangePwd(emp.EmpID, _changeAccountView.NewPwd);
                 if (result) {

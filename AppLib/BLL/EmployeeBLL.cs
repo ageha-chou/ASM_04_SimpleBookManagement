@@ -1,13 +1,23 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 
 namespace AppLib.BLL {
     public class EmployeeBLL {
         private static string CON_STRING = @"server=SE140622\SQLEXPRESS;database=ASM04_BookStore;uid=sa;pwd=123456";
         public Employee Emp { get; set; }
+        private static EmployeeBLL _instance = null;
+        public static EmployeeBLL Instance {
+            get
+            {
+                if(_instance == null) {
+                    _instance = new EmployeeBLL();
+                }
+                return _instance;
+            }
+        }
+        private EmployeeBLL() {
 
+        }
         public bool CheckLogin(string empID, string pwd) {
             SqlConnection con = new SqlConnection(CON_STRING);
             string sql = "SELECT EmpRole FROM Employee " +

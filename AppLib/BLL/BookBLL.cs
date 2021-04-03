@@ -1,12 +1,21 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
 using System;
-using System.Collections.Generic;
 
 namespace AppLib.BLL {
     public class BookBLL {
         private static string CON_STRING = @"server=SE140622\SQLEXPRESS;database=ASM04_BookStore;uid=sa;pwd=123456";
-
+        private static BookBLL _instance = null;
+        public static BookBLL Instance{
+            get
+            {
+                if (_instance == null) _instance = new BookBLL();
+                return _instance;
+            }
+        }
+        private BookBLL() {
+            
+        }
         public DataTable GetBooks() {
             DataTable dt = null;
             SqlConnection con = new SqlConnection(CON_STRING);
