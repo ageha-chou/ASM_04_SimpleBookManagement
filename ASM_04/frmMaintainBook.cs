@@ -16,6 +16,7 @@ namespace ASM_04 {
 
         public frmMaintainBook(Employee e) : this() {
             lblEmp.Text = $"EmpID: {e.EmpID}";
+            btnSave.Enabled = false;
         }
 
         private DataTable dtBook;
@@ -76,8 +77,8 @@ namespace ASM_04 {
             txtBookID.Clear();
             txtBookName.Clear();
             txtBookPrice.Clear();
-
             txtBookName.Focus();
+            btnSave.Enabled = true;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e) {
@@ -85,13 +86,18 @@ namespace ASM_04 {
             txtBookPrice.ReadOnly = false;
             ClearDataBinding();
             txtBookName.Focus();
+            btnSave.Enabled = true;
         }
 
         private void dgvBooks_SelectionChanged(object sender, EventArgs e) {
             if(isNew) {
                 SetDataBinding();
                 isNew = false;
+                txtBookID.ReadOnly = true;
+                txtBookName.ReadOnly = true;
+                txtBookPrice.ReadOnly = true;
             }
+            btnSave.Enabled = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e) {

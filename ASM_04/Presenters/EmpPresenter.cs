@@ -28,6 +28,7 @@ namespace ASM_04.Presenters {
             bool result = _empModel.CheckLogin(_loginView.EmpID, _loginView.EmpPwd);
             if (result) {
                 _loginView.Emp = _empModel.Emp;
+                _loginView.ProcessMessage = "";
             } else {
                 _loginView.ProcessMessage = "EmpID or password is wrong!!!";
             }

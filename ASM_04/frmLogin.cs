@@ -31,6 +31,9 @@ namespace ASM_04 {
         }
 
         private void CheckLogin() {
+            if(string.IsNullOrWhiteSpace(EmpID) || string.IsNullOrWhiteSpace(EmpPwd)) {
+                return;
+            }
             presenter = new EmpPresenter(this);
             presenter.CheckLogin();
             if (!string.IsNullOrEmpty(ProcessMessage)) {
