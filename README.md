@@ -8,7 +8,7 @@
   BookName varchar(50), 
   BookPrice float
 )
-  **Employee**(
+**Employee**(
     EmpID char(10), 
     EmpPassword char(15), 
     EmpRole bit 
